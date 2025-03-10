@@ -1,0 +1,107 @@
+1) signin
+  inq : 2800-0010000001010000-20241231101118-001-007-008CA01
+  res : 2810-0010000003010000-20241231101118-0000-001-007-008CA01
+
+2) signout
+  inq : 2800-0010000001010000-20241231101134-002-007-008CA01
+  res : 2810-0010000003010000-20241231101134-0000-002-007-008CA01
+
+3) ehco
+  inq : 2800-0010000001010000-20241231101155-301-007-008CA01
+  res : 2810-0010000003010000-20241231101155-0000-301-007-008CA01
+        2810-0010000001010000-20250106853290-0068-01-007-008CA01
+        2810-0010000001010000-20250106853290-0068-01-007-008CA01
+
+--------------------
+
+--1) type data 1
+[
+    {
+    "type_masge": 1,
+    "message": "2800001000000101000020241216135329001007008CA01"
+    }
+]
+
+--2) type data 2
+[
+    {
+        "type_masge":2,
+        {
+            "mti":"2800",
+            "bit_map":"0010000001010000",
+            "dtl_trans":"20241216135329",
+            "action_code":"001",
+            "mti_len":"007",
+            "switcher_id":"008CA01"
+        }
+    }
+]
+
+
+output :
+[
+    {
+        "status": "OK",
+        "serverResponse": "28100010000003010000202412180739520000001007008CA01",
+        "serverResponseParsing": [
+            {
+                "mti":"2800",
+                "bit_map":"0010000001010000",
+                "dtl_trans":"20241216135329",
+                "response_code":"0000",
+                "action_code":"001",
+                "mti_len":"007",
+                "switcher_id":"008CA01"
+            }
+        ]
+    }
+]
+
+
+[
+    {
+        "status": "OK",
+        rc
+        info
+        "serverResponse": "28100010000003010000202412181017010000001007008CA01",
+        "serverResponseParsing": [
+            {
+                "MTI": "2810",
+                "bit_map": "0010000003010000",
+                "dtl_trans": "20241218101701",
+                "response_code": "0000",
+                "action_code": "001",
+                "mti_len": "007",
+                "switcher_id": "008CA01"
+            }
+        ]
+    }
+]
+
+28100010000003010000202412170739520000001007008CA01
+
+
+jika error  return "Error: Tidak dapat terhubung ke server setelah " + maxRetries + " percobaan.\nDetail: " + e.getMessage();
+respon message manual dibuat aplikasi kita 
+
+output
+[
+    {
+        "status": "OK",
+        "serverResponse": "Error: Tidak dapat terhubung ke server setelah 3 percobaan.\nDetail: Connection timed out: connect",
+        "serverResponseParsing": [
+            {
+                "MTI": "Erro",
+                "bit_map": "r: Tidak dapat t",
+                "dtl_trans": "erhubung ke se",
+                "response_code": "rver",
+                "action_code": " se",
+                "mti_len": "tel",
+                "switcher_id": "ah 3 percobaan.\nDetail: Connection timed out: connect"
+            }
+        ]
+    }
+]
+
+yg diharapkan :
+serverResponse = 28100010000003010000202412181017010000001007008CA01

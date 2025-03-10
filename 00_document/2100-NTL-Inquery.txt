@@ -1,0 +1,186 @@
+IKAN
+1) inquery
+inq : 210040300041000100000511504000000000001202501091604466017070080061023008CA011122112005828000
+res : 21105030004102010004051150436000000008660000000000000012025010916044660170700800610000235008CA011122112005828012PENYAMBUNGAN BARU        2016041202022222            UMAR ABDI                9B990B3B680C48F0B6E658642709410411221                                   123            200000000086600000200000000086600000200000000000220101200000000000000000
+
+-----------------
+1) inquery rptag = 866000
+   -- 133 if RC != 0000 235 if RC = 0000
+   inq : 2100-4030004100010000-05-11504-000000000001-20241231101310-6017-07-0080061-023-   -008CA01-1122112005828-000
+         2100-4030004100010000-05-11504-000000000001-20241231101310-6017-07-0080061-023-007-008CA01-1122112005828-000
+         2100-4030004100010000-05-11504-000000000001-20250109160446-6017-07-0080061-023-008CA01-1122112005828-000
+   res : 2110-5030004102010004-05-11504-360-0-000000866000-000000000001-20241231101310-6017-07-0080061-0000-235-008CA01-1122112005828012PENYAMBUNGAN BARU        2016041202022222            UMAR ABDI                4E7B5BE34B6D4EB7910701-5C0C7F73AA11221                                   123            200000000086600000200000000086600000200000000000220101200000000000000000
+         2110-5030004102010004-05-11504-360-0-000000866000-000000000001-20241231101310-6017-07-0080061-0000-235-008CA01-1122112005828012PENYAMBUNGAN BARU        2016041202022222            UMAR ABDI                FF993D4B540E4F06B93DDEE0B14B0EB011221                                   123            200000000086600000200000000086600000200000000000220101200000000000000000
+   
+   --rc 0000=sukses
+   [
+    {
+        "status": "OK",
+        "serverResponse": "21105030004102010004051150436000000008660000000000000012024123110131060170700800610000235008CA011122112005828012PENYAMBUNGAN BARU        2016041202022222            UMAR ABDI                544B7FE686284C8597D2477BFC6FF94C11221                                   123            200000000086600000200000000086600000200000000000220101200000000000000000",
+        "serverResponseParsing": [
+            {
+                "MTI": "2110",
+                "bit_map": "5030004102010004",
+                "pan_len": "05",
+                "pan": "11504",
+                "iso_curr_code": "360",
+                "curr_minor_unit": "0",
+                "curr_value_amount": "000000866000",
+                "switcher_tan": "000000000001",
+                "dtl_trans": "20241231101310",
+                "merchant": "6017",
+                "bank_len": "07",
+                "bank_id": "0080061",
+                "response_code": "0000",
+                "apd_len": "235",
+                "switcher_id": "008CA01",
+                "register_num": "1122112005828",
+                "trans_code": "012",
+                "trans_name": "PENYAMBUNGAN BARU        ",
+                "register_date": "20160412",
+                "register_expire_date": "02022222",
+                "subscriber_id": "            ",
+                "subscriber_name": "UMAR ABDI                ",
+                "ref_num_srv": "544B7FE686284C8597D2477BFC6FF94C",
+                "service_unit": "11221",
+                "service_unit_address": "                                   ",
+                "service_unit_phone": "123            ",
+                "trans_amount_minor_unit": "2",
+                "trans_amount": "00000000086600000",
+                "serv_bill_minor_unit": "2",
+                "serv_bill_value": "00000000086600000",
+                "serv_bill_charge_admin_minor_unit": "2",
+                "serv_bill_charge_admin_value": "0000000000",
+                "apd2_len": "022",
+                "apd2_bill_comp_type": "01",
+                "apd2_bill_comp_minor_unit": "0",
+                "apd2_bill_comp_value": "12000000000000000"
+            }
+        ]
+    }
+]
+
+   -- rc 0011 = belum signon/login
+   [
+    {
+        "status": "OK",
+        "serverResponse": "21105030004102010000051150400000000000000000000000000012024123110131060170700800610011023008CA011122112005828000",
+        "serverResponseParsing": [
+            {
+                "MTI": "2110",
+                "bit_map": "5030004102010000",
+                "pan_len": "05",
+                "pan": "11504",
+                "iso_curr_code": "000",
+                "curr_minor_unit": "0",
+                "curr_value_amount": "000000000000",
+                "switcher_tan": "000000000001",
+                "dtl_trans": "20241231101310",
+                "merchant": "6017",
+                "bank_len": "07",
+                "bank_id": "0080061",
+                "response_code": "0011",
+                "apd_len": "023",
+                "switcher_id": "008CA01",
+                "register_num": "1122112005828",
+                "trans_code": "000"
+            }
+        ]
+    }
+]
+   
+
+Penjelasan di atas menjelaskan rincian spesifikasi pesan dalam format ISO 8583 untuk tipe transaksi tertentu (MTI 2100 = Inquiry Request). Berikut adalah detailnya:
+
+Penjelasan Kolom
+Field: Nomor field dalam format ISO 8583.
+Name: Nama elemen data atau atribut.
+Type:
+n: Numeric (hanya angka).
+an: Alphanumeric (angka dan huruf).
+X: Extended alphanumeric.
+h: Hexadecimal.
+Length: Panjang data dalam karakter (fixed atau variable length).
+Description: Deskripsi elemen data atau atribut.
+Mandatory: Indikasi apakah field wajib digunakan (YES untuk wajib).
+Rincian Field
+MTI (Message Type Indicator):
+
+Deskripsi: Jenis pesan, di sini 2100 untuk Inquiry Request.
+Tipe: n.
+Panjang: 4 karakter.
+Wajib: Ya.
+Bit Map:
+
+Deskripsi: Bitmap primer yang menunjukkan field mana yang digunakan.
+Tipe: h.
+Panjang: 16 karakter.
+Detail: 4030004100010000 artinya field yang digunakan adalah 2, 11, 12, 26, 32, dan 48.
+Length of PAN (Primary Account Number):
+
+Deskripsi: Panjang nomor PAN dalam dua digit, dengan padding nol di sebelah kiri.
+Tipe: n.
+Panjang: 2 karakter.
+Primary Account Number (PAN):
+
+Deskripsi: Nomor rekening utama, digunakan sebagai kode tagihan untuk NON-EL-BILL.
+Tipe: X.
+Panjang: 5 karakter.
+Switcher Trace Audit Number:
+
+Deskripsi: Nomor unik untuk melacak transaksi oleh switcher.
+Tipe: n.
+Panjang: 12 karakter.
+Detail: Selalu diisi dengan 000000000000.
+Date & Time, Local Transaction:
+
+Deskripsi: Tanggal dan waktu transaksi dalam format CCYYMMDDhhmmss.
+Tipe: n.
+Panjang: 14 karakter.
+Merchant Category Code:
+
+Deskripsi: Kategori merchant sesuai jenis transaksi, contoh:
+6010 = Teller.
+6011 = ATM.
+6014 = Internet.
+Tipe: n.
+Panjang: 4 karakter.
+Length of Bank Code:
+
+Deskripsi: Panjang kode bank dalam 2 digit, dengan padding nol di sebelah kiri.
+Tipe: n.
+Panjang: 2 karakter.
+Bank Code:
+
+Deskripsi: Kode bank, diisi dengan padding nol di sebelah kiri.
+Tipe: an.
+Panjang: 7 karakter.
+Length of Additional Private Data:
+
+Deskripsi: Panjang total data privat tambahan (sub-field dari elemen data 48).
+Tipe: n.
+Panjang: 3 karakter.
+Additional Private Data (Data Elemen 48):
+
+Deskripsi: Data privat tambahan, terdiri dari sub-elemen:
+Switcher ID: Kode identifikasi switcher (7 karakter, padding nol di kiri).
+Registration Number: Nomor registrasi (13 karakter, padding spasi di kiri).
+Transaction Code: Kode transaksi (3 karakter, diisi 000).
+Penggunaan Data Element
+Setiap elemen data diproses berdasarkan Bitmap Primer, sehingga hanya elemen yang relevan dengan tipe transaksi yang dimuat. 
+Dalam contoh ini, elemen yang aktif adalah 2, 11, 12, 26, 32, dan 48.
+
+Jika ada yang perlu dijelaskan lebih lanjut, beri tahu ya! 😊
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,54 @@
+public static String ResponServerParsing_2110(String inputMessage) {
+    JsonArray jsonArray = new JsonArray();
+    JsonObject parsedObject = new JsonObject();
+
+    try {
+        String[] fields = {
+            "MTI", "bit_map", "pan_len", "pan", "iso_curr_code",
+            "curr_minor_unit", "curr_value_amount", "switcher_tan", "dtl_trans",
+            "merchant", "bank_len", "bank_id", "response_code", "apd_len"
+        };
+
+        int[] fieldLengths = {4, 16, 2, 5, 3, 1, 12, 12, 14, 4, 2, 7, 4, 3};
+        int currentIndex = 0;
+
+        // Parsing data awal
+        for (int i = 0; i < fields.length; i++) {
+            if (inputMessage.length() >= currentIndex + fieldLengths[i]) {
+                String value = inputMessage.substring(currentIndex, currentIndex + fieldLengths[i]);
+                parsedObject.addProperty(fields[i], value);
+                currentIndex += fieldLengths[i];
+            } else {
+                parsedObject.addProperty(fields[i], null);
+                break;
+            }
+        }
+
+        String responseCode = parsedObject.get("response_code").getAsString();
+        String apdLen = parsedObject.get("apd_len").getAsString();
+
+        // Parsing tambahan jika diperlukan
+        if (responseCode != null && apdLen != null && !responseCode.equals("0000") && Integer.parseInt(apdLen) > 133) {
+            parsedObject.addProperty("switcher_id", safeSubstring(inputMessage, currentIndex, 96));
+            // Tambahkan parsing lain sesuai kebutuhan
+        } else if ("0000".equals(responseCode)) {
+            parsedObject.addProperty("switcher_id", safeSubstring(inputMessage, currentIndex, 96));
+            parsedObject.addProperty("service_unit", safeSubstring(inputMessage, currentIndex + 127, 227));
+            // Tambahkan parsing lain sesuai kebutuhan
+        }
+
+        jsonArray.add(parsedObject);
+    } catch (Exception e) {
+        JsonObject errorObject = new JsonObject();
+        errorObject.addProperty("status", "ERROR");
+        errorObject.addProperty("message", "Terjadi kesalahan saat memproses inputMessage: " + e.getMessage());
+        jsonArray.add(errorObject);
+    }
+
+    return new Gson().toJson(jsonArray);
+}
+
+private static String safeSubstring(String str, int start, int end) {
+    if (str == null || str.length() < start) return null;
+    return str.substring(start, Math.min(end, str.length()));
+}

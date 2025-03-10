@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "caec5ece-0200-4b8e-9311-60e30c060078",
+		"name": "MAVEN-API-PPOB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9016943",
+		"_collection_link": "https://lively-moon-929484.postman.co/workspace/MIV---PROJECT~3bd1db36-50cb-4b04-b448-412186c9f4ee/collection/9016943-caec5ece-0200-4b8e-9311-60e30c060078?action=share&source=collection_link&creator=9016943"
+	},
+	"item": [
+		{
+			"name": "ppob_login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"message\": \"2800001000000101000020241216135329001007008CA01\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/maven-restapi-ppob/api/ppob/post_ppob_login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"maven-restapi-ppob",
+						"api",
+						"ppob",
+						"post_ppob_login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ppob_login_inJson_msg-V1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n    \"type_masge\": 1,\r\n    \"message\": \"2800001000000101000020241216135329001007008CA01\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/maven-restapi-ppob/api/ppob/2800_ppob_login_json_v1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"maven-restapi-ppob",
+						"api",
+						"ppob",
+						"2800_ppob_login_json_v1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ppob_login_inJson_msgJSON-V21",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n    \"type_masge\": 1,\r\n    \"message\": \"2800001000000101000020241218101701001007008CA01\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/maven-restapi-ppob/api/ppob/2800_ppob_login_json",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"maven-restapi-ppob",
+						"api",
+						"ppob",
+						"2800_ppob_login_json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ppob_login_inJson_msgJSON-V22",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"type_masge\": 2,\r\n        \"mti\": \"2800\",\r\n        \"bit_map\": \"0010000001010000\",\r\n        \"dtl_trans\": \"20241216135329\",\r\n        \"action_code\": \"001\",\r\n        \"mti_len\": \"007\",\r\n        \"switcher_id\": \"008CA01\"\r\n    }\r\n]\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/maven-restapi-ppob/api/ppob/2800_ppob_login_json",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"maven-restapi-ppob",
+						"api",
+						"ppob",
+						"2800_ppob_login_json"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

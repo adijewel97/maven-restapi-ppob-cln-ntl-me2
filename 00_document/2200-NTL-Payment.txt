@@ -1,0 +1,166 @@
+2) payment
+   inq : 2200503000410001000405115043600000000866000000000000001202412311014436017070080061267008CA011122112005828012PENYAMBUNGAN BARU        2016041202022222            UMAR ABDI                4E7B5BE34B6D4EB79107015C0C7F73AACD5AE684AD124DBE9CAA8F1F0444444411221                                   123            200000000086600000200000000086600000200000000000220101200000000000000000
+         
+         2200503000410201000405115043600000000866000000000000001202501080113106017070080061235008CA011122112005828012PENYAMBUNGAN BARU        2016041202022222            UMAR ABDI                EDB7F6AC73BE4422B43CD61A51D39C55CD5AE684AD124DBE9CAA8F1F0444444211221                  
+                 123            2000000000866000002000000000866000002000000000002201012000000000000000
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+          2200-5030004100010004-05-11504-360-0-000000866000-000000000001-20241231101443-6017-07-0080061-267-008CA01-11221-12005828-012-PENYAMBUNGAN BARU        -20160412-02022222-            -UMAR ABDI                -4E7B5BE34B6D4EB79107015C0C7F73AA-CD5AE684AD124DBE9CAA8F1F04444444-11221-                                   -123-            -2-00000000086600000-2-00000000086600000-2-0000000000-022-01-0-1200000000000000000
+     res--21105030004102010004051150436000000008660000000000000012025010801131060170700800610000235008CA011122112005828012PENYAMBUNGAN BARU        2016041202022222            UMAR ABDI                EDB7F6AC73BE4422B43CD61A51D39C5511221                                   123            200000000086600000200000000086600000200000000000220101200000000000000000
+          2110-5030004102010004-05-11504-360-0-000000866000-000000000001-20250108011310-6017-07-0080061-0000-235-008CA01-11221-12005828-012-PENYAMBUNGAN BARU        -20160412-02022222-            -UMAR ABDI                -EDB7F6AC73BE4422B43CD61A51D39C551-1221-                                   -123            -2-00000000086600000-2-00000000086600000-2-0000000000-022-01-0-1200000000000000000
+          --ambil
+          21105030004102010004051150436000000008660000000000000012025010801131060170700800610000235008CA011122112005828012PENYAMBUNGAN BARU        2016041202022222            UMAR ABDI                12990854B90F4BA38FF845D795A9CA3211221                                   123            200000000086600000200000000086600000200000000000220101200000000000000000
+          2110-5030004102010004-05-11504-360-0-000000866000-000000000001-20250108011310-6017-07-0080061-0000-235-008CA01-11221-12005828-012-PENYAMBUNGAN BARU        -20160412-02022222-            -UMAR ABDI                -12990854B90F4BA38FF845D795A9CA321-1221-                                   -123            -2-00000000086600000-2-00000000086600000-2-0000000000-022-01-0-1200000000000000000
+
+    inq-me  : 2110-5030004102010004-05-11504-360-0-000000866000-000000000001-20250108011310-6017-07-0080061-0000-235-008CA01-11221-12005828-012-PENYAMBUNGAN BARU        -20160412-02022222-            -UMAR ABDI                -46E40D1F0FD544DD97B1FD6E6464353811221-                                   -123            -2-00000000086600000-2-00000000086600000-2-0000000000-022-01-0-1200000000000000000
+    ikan    : 2200-5030004100010004-05-11504-360-0-000000866000-000000000001-20241231101443-6017-07-0080061-267-008CA01-11221-12005828-012-PENYAMBUNGAN BARU        -20160412-02022222-            -UMAR ABDI                -4E7B5BE34B6D4EB79107015C0C7F73AA-CD5AE684AD124DBE9CAA8F1F04444444-11221-                                   -123            -2-00000000086600000-2-00000000086600000-2-0000000000-022-01-0-1200000000000000000
+    cret-me : 2200-5030004102010004-05-11504-360-0-000000866000-000000000001-20250108011310-6017-07-0080061-235-008CA01-11221-12005828-012-PENYAMBUNGAN BARU        -20160412-02022222-            -UMAR ABDI                -46E40D1F0FD544DD97B1FD6E64643538-CD5AE684AD124DBE9CAA8F1F04444445-11221-                                   -123            -2-00000000086600000-2-00000000086600000-2-0000000000-022-01-0-1200000000000000000
+              
+   res : 2210503200410201000605115043600000000866000000000000001202412311014432024123160170700800610000267008CA011122112005828012PENYAMBUNGAN BARU        2016041202022222            UMAR ABDI                4E7B5BE34B6D4EB79107015C0C7F73AACD5AE684AD124DBE9CAA8F1F0444444411221                                   123            200000000086600000200000000086600000200000000000220101200000000000000000054Bila Mati Lampu hub :"Tukang Listrik" atau " PE EL EN"
+         2210503200410201000605115043600000000866000000000000001202412311014432024123160170700800610000267008CA011122112005828012PENYAMBUNGAN BARU        2016041202022222            UMAR ABDI                4E7B5BE34B6D4EB79107015C0C7F73AACD5AE684AD124DBE9CAA8F1F0444444411221                                   123            200000000086600000200000000086600000200000000000220101200000000000000000054Bila Mati Lampu hub :"Tukang Listrik" atau " PE EL EN"
+
+Catatan temuan eror
+      bitmap 2100 = 5030004102010004
+      bitmap 2200 = 5030004100010004 (angaka 2 hilang di inq payment)
+
+    select *
+from REPADMIN.TRANSAKSI_NONTAGLIS
+where nomor_registrasi = '1122112005828'
+
+update REPADMIN.TRANSAKSI_NONTAGLIS
+set KDGERAK='12', KDPP=null, TGLBAYAR =null, JAMBAYAR =null, TGLTRANS =null, USERID =null, REFNUM =null, SREFNUM =null, MERCHANT =null, TGLSETTLE =null
+,TGUPDATE=null, KIRIM = null
+where nomor_registrasi = '1122112005828';
+
+select * 
+FROM gapura.CDCMOD_EL_NTAG_LOG_TRAN a
+WHERE  CDM_LT_LOGGED > '2025-01-14 00:20:00'
+--and  a.CDM_LT_SID in ( select cdc_s_id from GAPURA.CDCCORE_SWITCHER where lower(CDc_s_name) like '%bii%')
+--and a.CDM_LT_CA in ( select cdc_b_id from GAPURA.CDCCORE_BANK where lower(CDc_B_name) like '%ch%')
+--and  CDM_LT_CMD IN ('2110','2210','2410','2411')
+--AND CDM_LT_RC='0000'
+--and cdm_lt_amount = 0
+--AND CDM_LT_SID in ('AJ100A3')      ---ST145S3   PLN01T1
+AND CDM_LT_SID in ('008CA01')
+
+----------------- input
+INFO: Received Request Body <json>: [
+    {
+        "typeMsg":2,
+        "mti":"2200",
+        "bit_map":"5030004100010004",
+        "pan_len":"05",
+        "pan":"11504",
+        "CurrISOCode":"360",
+        "CurrMinorUnit":"0",
+        "CurrValueAmount":"000000866000",
+        "switcher_tan":"000000000001",
+        "dtl_trans":"20250113081310",
+        "merchant":"6017",
+        "bank_len":"07",
+        "bank_id":"0080061",
+        "apd_Len":"267",
+        "switcher_id":"008CA01",
+        "register_num":"1122112005828",
+        "trans_code":"012",
+        "trans_name":"PENYAMBUNGANáBARUáááááááá",
+        "register_date":"20160412",
+        "register_expiredate":"02022222",
+        "Subscriber_id":"áááááááááááá",
+        "Subscriber_name":"UMARáABDIáááááááááááááááá",
+        "ref_num_srv":"03536B017EE34C4D8B23158D4C7CE749",
+        "ref_num_switcher":"CD5AE684AD124DBE9CAA8F1F04444444",
+        "service_unit":"11221",
+        "service_unitaddress":"ááááááááááááááááááááááááááááááááááá",
+        "service_unitphone":"123áááááááááááá",
+        "trans_amount_minorunit":"2",
+        "trans_amount":"00000000086600000",
+        "servbill_minorunit":"2",
+        "servbill_value":"00000000086600000",
+        "servbill_ChargeAdminMinorUnit":"2",
+        "servbill_ChargeAdminValue":"0000000000",
+        "apd2_Len":"022",
+        "apd2_BillCompType":"01",
+        "apd2_BillCompMinorunit":"0",
+        "apd2_BillCompValue":"1200000000000000000"
+    }
+]
+
+----------------- output
+-- Menghilangkan character aneh script java : message   = message.replaceAll("[^\\x20-\\x7E]", " ");
+INFO: INFO: Response JSON: [
+  {
+    "status": "OK",
+    "Message_send": "2200503000410001000405115043600000000866000000000000001202501130813106017070080061267008CA011122112005828012PENYAMBUNGAN BARU        2016041202022222            UMAR ABDI                03536B017EE34C4D8B23158D4C7CE749CD5AE684AD124DBE9CAA8F1F0444444411221                                   123            200000000086600000200000000086600000200000000000220101200000000000000000",
+    "serverResponse": "2210503200410201000605115043600000000866000000000000001202501130813102025011360170700800610000267008CA011122112005828012PENYAMBUNGAN BARU        2016041202022222            UMAR ABDI                03536B017EE34C4D8B23158D4C7CE749CD5AE684AD124DBE9CAA8F1F0444444411221                      
+             123            200000000086600000200000000086600000200000000000220101200000000000000000054Bila Mati Lampu hub :\"Tukang Listrik\" atau \" PE EL EN\"",
+    "serverResponseParsing": [
+      {
+        "mti": "2210",
+        "bitMap": "5032004102010006",
+        "pan_len": "05",
+        "pan": "11504",
+        "ISOCurrCode": "360",
+        "CurrMinorUnit": "0",
+        "CurrValueAmount": "000000866000",
+        "switcher_tan": "000000000001",
+        "dtl_trans": "20250113081310",
+        "date_settlement": "20250113",
+        "merchant": "6017",
+        "bank_len": "07",
+        "bank_id": "0080061",
+        "RC": "0000",
+        "apd_Len": "267",
+        "switcher_id": "008CA01",
+        "register_num": "1122112005828",
+        "trans_code": "012",
+        "trans_name": "PENYAMBUNGAN BARU        ",
+        "register_date": "20160412",
+        "register_expiredate": "02022222",
+        "Subscriber_id": "            ",
+        "Subscriber_name": "UMAR ABDI                ",
+        "refnunum_srv": "03536B017EE34C4D8B23158D4C7CE749",
+        "service_unitrefnum": "CD5AE684AD124DBE9CAA8F1F04444444",
+        "service_unit": "11221",
+        "service_unit_address": "                                   ",
+        "service_unit_phone": "123            ",
+        "trans_amount_minorunit": "2",
+        "trans_amount": "00000000086600000",
+        "servbill_minorunit": "2",
+        "servbill_value": "00000000086600000",
+        "servbill_ChargeAdminMinorUnit": "2",
+        "servbill_ChargeAdminValue": "0000000000",
+        "apd2_Len": "022",
+        "apd2_BillCompType": "01",
+        "apd2_BillCompMinorunit": "0",
+        "apd2_BillCompValue": "12000000000000000",
+        "info_text_len": "000"
+      }
+    ]
+  }
+]
+Received Request Body: [
+    {
+        "typeMsg":2,
+        "mti":"2100",
+        "bit_map":"4030004100010000",
+        "pan_len":"05",
+        "pan":"11504",
+        "switcher_tan":"000000000001",
+        "dtl_trans":"20250113081310",
+        "merchant":"6017",
+        "bank_len":"07",
+        "bank_id":"0080061",
+        "apd_Len":"023",
+        "switcher_id":"008CA01",
+        "register_num":"1122112005828",
+        "trans_code":"000"
+    }
+]
+
+
+Perubhan spect
+- n	    3  Length of Info Text
+- ans	999  Custom Message from PLN e.g. "Hemat Listrik & Ayo Bebas Narkoba"
+
+	
