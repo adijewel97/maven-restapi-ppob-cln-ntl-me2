@@ -1,0 +1,49 @@
+2025-03-10 13:09:43.253 - INFO:  - Send Request Body : [
+    {
+        "type_msg": 2,
+        "mti": "2800",
+        "bit_map": "0010000001010000",
+        "dtl_trans": "20250310130943",
+        "action_code": "001",
+        "mti_len": "007",
+        "switcher_id": "008CA01"
+    }
+]
+2025-03-10 13:09:43.288 - INFO:  - Send Request Body Parsing Type 2: [
+  {
+    "mti": "2800",
+    "bitMap": "0010000001010000",
+    "dtlTrans": "20250310130943",
+    "actionCode": "001",
+    "mtiLen": "007",
+    "switcherId": "008CA01"
+  }
+]
+2025-03-10 13:09:43.495 - INFO: Valid JSON diterima: {"type_msg":2,"mti":"2800","bit_map":"0010000001010000","dtl_trans":"20250310130943","action_code":"001","mti_len":"007","switcher_id":"008CA01"}
+2025-03-10 13:09:43.496 - INFO: INFO: Response JSON: {
+  "Status": "OK",
+  "Info": "Respon diterima.",
+  "ClientInquery": "2800001000000101000020250310130943001007008CA01",
+  "ClientInqueryParsing": [
+    {
+      "mti": "2800",
+      "bit_map": "0010000001010000",
+      "dtl_trans": "20250310130943",
+      "action_code": "001",
+      "apd_len": "007",
+      "switcher_id": "008CA01"
+    }
+  ],
+  "ServerResponse": "28104030004100010000202503101309430000001007008CA01",
+  "serverResponseParsing": [
+    {
+      "mti": "2810",
+      "bit_map": "4030004100010000",
+      "dtl_trans": "20250310130943",
+      "rc": "0000",
+      "action_code": "001",
+      "apd_len": "007",
+      "switcher_id": "008CA01"
+    }
+  ]
+}
